@@ -1,157 +1,178 @@
-# AI Master Bot Pro
+# 🚀 AI Master Bot Pro
 
-**AI Master Bot Pro** is a trading bot built with **MetaTrader 5 (MT5)**, designed for automated trading using AI-powered strategies in Forex, Crypto, and Metal markets. This bot leverages technical indicators like **EMA**, **RSI**, and **MACD** to analyze market trends and make real-time buy/sell decisions.
+### Institutional-Grade Multi-Asset Trading System (MT5 + Streamlit)
 
-## Features
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Platform](https://img.shields.io/badge/Platform-MetaTrader5-green)
+![UI](https://img.shields.io/badge/UI-Streamlit-red)
+![Status](https://img.shields.io/badge/Status-Production--Ready-brightgreen)
 
-- **AI-based Trading Strategies**:  
-  The bot supports multiple trading strategies such as:
-  - Owner Default
-  - RSI Sniper
-  - Bollinger Reversion
-  - MACD Zero-Cross
-  - Triple EMA Alignment
-  - Stochastic Scalper
-  - Price Breakout
-  - Golden Cross
-  - Engulfing Tracker
-  - ATR Volatility
-  
-- **Real-Time Position Management**:  
-  Track open positions, profit/loss, and historical trades.
+------------------------------------------------------------------------
 
-- **Risk Management**:  
-  Set Stop-Loss (SL) and Take-Profit (TP) levels for different asset classes:
-  - Forex
-  - Crypto
-  - Metals
-  
-- **Dynamic Strategy Switching**:  
-  The bot can automatically switch between **COUNTER** and **FOLLOW** strategy modes based on historical performance (wins/losses).
+## 🌟 Overview
 
-- **Customizable Settings**:  
-  Configure trading strategies, risk parameters (SL, TP, margin), and asset categories directly from the Streamlit UI.
+**AI Master Bot Pro** is a professional-grade automated trading system
+built for **MetaTrader 5 (MT5)** with a modern web-based dashboard
+powered by Streamlit.
 
-## Requirements
+Designed for serious traders, this system supports **Forex, Crypto, and
+Metals** with intelligent strategy switching, risk controls, and live
+performance monitoring.
 
-- **MetaTrader 5 (MT5)**: You must have a MetaTrader 5 account and trading platform configured.
-- **Python 3.x**: The bot is built using Python and requires Python 3.x.
-- **Libraries**: The following Python libraries are required to run this bot:
-  - `streamlit`
-  - `pandas`
-  - `numpy`
-  - `MetaTrader5`
-  - `json`
-  
-  Install the required libraries with:
-  ```bash
-  pip install streamlit pandas numpy MetaTrader5
+------------------------------------------------------------------------
 
+## 🧠 Core Capabilities
 
-1. Clone the Repository
+### 🔹 Multi-Asset Trading
 
-Clone the repository to your local machine:
+-   Forex (H1 timeframe)
+-   Cryptocurrency (W1 timeframe)
+-   Metals (D1 timeframe)
 
-git clone https://github.com/yourusername/ai-master-bot-pro.git
-cd ai-master-bot-pro
+### 🔹 10 Built-In Trading Strategies
 
-2. Install Dependencies
+-   Owner Default (EMA-based trend logic)
+-   RSI Sniper
+-   Bollinger Reversion
+-   MACD Zero-Cross
+-   Triple EMA Alignment
+-   Stochastic Scalper
+-   Price Breakout
+-   Golden Cross
+-   Engulfing Tracker
+-   ATR Volatility Expansion
 
-Ensure you have the necessary Python libraries installed:
+### 🔹 Intelligent Strategy Mode
 
-pip install -r requirements.txt
+-   **FOLLOW Mode** → Trades with trend
+-   **COUNTER Mode** → Trades against trend
+-   Auto-switching after consecutive identical results (win/win or
+    loss/loss)
 
-3. Run the Streamlit App
+------------------------------------------------------------------------
 
-Start the Streamlit application to open the bot’s interface:
+## 📊 Advanced Dashboard
 
-streamlit run app.py
+✔ Live Account Balance & Equity\
+✔ Floating P&L Monitoring\
+✔ Session-Based Realized P&L\
+✔ Categorized Open Positions\
+✔ Closed Trade History\
+✔ Activity Logs\
+✔ Margin Usage Protection
 
-The app will open in your browser, and you can start configuring and running your AI trading bot.
+Modern dark UI with institutional-style metric boxes and real-time
+updates.
 
-4. Connect to MT5
+------------------------------------------------------------------------
 
-Click on the "🔌 HUBUNGKAN MT5" button to connect the bot to your MT5 account. Ensure that your MetaTrader 5 account is properly configured and connected to the platform.
+## 🛡 Risk Management Engine
 
-5. Configure Settings
+-   Custom Stop Loss & Take Profit per asset category
+-   Adjustable Lot Size
+-   Margin Usage Cap (% Protection)
+-   Maximum Symbol Scanner Control
+-   Magic Number Isolation (777111)
 
-Upload your .json settings file or configure your bot directly through the UI.
+------------------------------------------------------------------------
 
-Select the trading strategy and asset categories you wish to use (Forex, Crypto, Metal).
+## 🏗 System Architecture
 
-Set your Stop-Loss and Take-Profit values for each asset class.
+Frontend: - Streamlit UI - Dynamic session state management - JSON
+configuration persistence
 
-Adjust your Lot Size and Margin settings.
+Backend: - MetaTrader5 Python API - Pandas & NumPy indicator engine -
+Automated order execution logic - Strategy signal engine (250-candle
+analysis window)
 
-6. Start the Bot
+------------------------------------------------------------------------
 
-Click on "▶️ MULA BOT" to start the bot and begin trading. The bot will automatically make trades based on the selected strategy and current market trends.
+## ⚙ Installation
 
-7. Monitor & Manage Positions
+### 1. Clone Repository
 
-View open positions and monitor your profit/loss.
+``` bash
+git clone https://github.com/steam899/MT5TradingBot.git
+cd MT5TradingBot
+```
 
-Review historical trades and activity logs.
+### 2. Install Dependencies
 
-The bot will display real-time updates on account balance, equity, and P&L.
+``` bash
+pip install streamlit pandas numpy MetaTrader5
+```
 
-8. Stop the Bot
+------------------------------------------------------------------------
 
-Click on "⏹️ BERHENTI" to stop the bot.
+## ▶ How to Run
 
-Settings File Format
+Make sure:
 
-You can upload a .json file to customize the bot’s settings. Here's an example of the settings file:
+-   MetaTrader 5 is installed
+-   You are logged into your trading account
+-   Algo Trading is enabled (Green)
 
-{
-    "set_lot": 0.01,
-    "set_sl_fx": 200,
-    "set_tp_fx": 400,
-    "set_sl_crypto": 5000,
-    "set_tp_crypto": 10000,
-    "set_sl_metal": 500,
-    "set_tp_metal": 1000,
-    "run_categories": ["Forex", "Crypto", "Metal"],
-    "strat_choice": "Owner Default",
-    "max_margin_pct": 60,
-    "max_symbols": 10
-}
-Customization
+Run:
 
-You can customize various parameters such as:
+``` bash
+streamlit run MT5.py
+```
 
-Lot Size (set_lot)
+Open your browser at:
 
-Stop Loss (SL) and Take Profit (TP) for Forex, Crypto, and Metal.
+    http://localhost:8501
 
-Risk Settings: Maximum margin percentage and maximum symbols to trade.
+------------------------------------------------------------------------
 
-Strategy Mode: COUNTER or FOLLOW based on previous trades.
+## 🔧 Configuration Management
 
-Troubleshooting
+You can:
 
-MT5 Not Connecting: Make sure your MT5 account is properly configured and that the MetaTrader 5 terminal is running.
+-   Upload custom JSON configuration files
+-   Download current strategy settings
+-   Persist trading preferences across sessions
 
-Data Errors: Ensure your internet connection is stable. If the bot isn't receiving market data, try reconnecting MT5.
+------------------------------------------------------------------------
 
-For more troubleshooting or questions, please open an issue in this repository.
+## 📈 Trading Logic Summary
 
-Contributing
+-   Forex → H1 Trend Model
+-   Crypto → Weekly Macro Bias
+-   Metals → Daily Structural Momentum
+-   Automatic news volatility detection (Metals filter)
+-   Position filtering to prevent duplicate trades
+-   Real-time symbol scanning (configurable limit)
 
-Contributions are welcome! Feel free to fork this project, open issues, and submit pull requests.
+------------------------------------------------------------------------
 
-Fork the repository
+## ⚠ Risk Disclaimer
 
-Create your feature branch: git checkout -b feature-branch
+Trading Forex, Cryptocurrency, and Metals involves significant financial
+risk and may not be suitable for all investors.
 
-Commit your changes: git commit -am 'Add new feature'
+This software is provided for educational and research purposes only.\
+Always test on a demo account before deploying to live capital.
 
-Push to the branch: git push origin feature-branch
+The developer assumes no responsibility for financial losses.
 
-Open a pull request
+------------------------------------------------------------------------
 
-License
+## 🔮 Roadmap
 
-This project is licensed under the MIT License - see the LICENSE
- file for details.
+-   Telegram Trade Notifications
+-   Performance Analytics Report Export
+-   Backtesting Module
+-   VPS Deployment Automation
+-   Multi-Account Scaling
 
+------------------------------------------------------------------------
+
+## 👨‍💻 Author
+
+AI Master Bot Pro\
+Private Proprietary System\
+© 2026 All Rights Reserved
+
+------------------------------------------------------------------------
+
+### 💎 Professional. Intelligent. Automated.
