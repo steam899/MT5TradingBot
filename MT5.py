@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 # ==========================================
 # 1. SETUP UI & CSS (FINAL NEAT DESIGN)
 # ==========================================
-st.set_page_config(page_title="AI Master Bot Pro", layout="wide")
+st.set_page_config(page_title="OMNI AI Pro Trading Bot", layout="wide")
 
 st.markdown("""
     <style>
@@ -156,7 +156,8 @@ def check_history_and_flip():
 # ==========================================
 with st.sidebar:
     st.image("https://raw.githubusercontent.com/steam899/Web-design/refs/heads/main/Photoroom-20260303_123523421.png", use_container_width=True)
-    if st.button("🔌 HUBUNGKAN MT5", use_container_width=True):
+    st.markdown("<h2 style='text-align: center;'>WELCOME TRADERS</h2>", unsafe_allow_html=True)
+    if st.button("🔌 CONNECT MT5", use_container_width=True):
         if mt5.initialize(): st.session_state.connected = True
 
     if st.session_state.connected:
@@ -197,7 +198,7 @@ with st.sidebar:
 # ==========================================
 if st.session_state.connected:
     acc = mt5.account_info()
-    st.markdown(f"<div style='text-align:center;' class='{'status-online' if st.session_state.is_running else 'status-offline'}'>BOT STATUS: {'ONLINE' if st.session_state.is_running else 'OFFLINE'}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='text-align:center;' class='{'status-online' if st.session_state.is_running else 'status-offline'}'>OMNI AI BOT {'ONLINE' if st.session_state.is_running else 'OFFLINE'}</div>", unsafe_allow_html=True)
     st.markdown(f"### 👤 {acc.name} | {acc.server}")
     
     # --- P&L CALCULATION (CLOSED ONLY) ---
@@ -283,4 +284,4 @@ if st.session_state.connected:
         st.rerun()
 else:
     st.image("https://raw.githubusercontent.com/steam899/Web-design/refs/heads/main/Photoroom-20260303_123523421.png", width=300)
-    st.info("💡 Sila klik 'HUBUNGKAN MT5'.")
+    st.info("💡 Please Click 'CONNECT MT5' To Start.")
