@@ -1,0 +1,17 @@
+{
+    "set_lot": 0.01,
+    "set_sl_fx": 500,
+    "set_tp_fx": 50,
+    "set_sl_crypto": 100000,
+    "set_tp_crypto": 1000,
+    "set_sl_metal": 100000,
+    "set_tp_metal": 1000,
+    "run_categories": [
+        "Forex",
+        "Crypto",
+        "Metal"
+    ],
+    "strat_choice": "Stochastic Scalper",
+    "max_margin_pct": 100,
+    "max_symbols": 30
+}
